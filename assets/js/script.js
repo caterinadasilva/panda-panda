@@ -45,15 +45,12 @@ function fotos() {
 }
 
 function textos() {
-	var izq = document.getElementsByClassName('caja')[0];
-	var der = document.getElementsByClassName('caja')[1];
-
 	document.getElementById('origen').onclick = function() {
-		document.getElementsByClassName('caja')[0].classList.toggle("hidden");
+		document.getElementsByClassName('izq')[0].classList.toggle("hidden");
 		return false;
 	}
 	document.getElementById('extincion').onclick = function() {
-		document.getElementsByClassName('caja')[1].classList.toggle("hidden");
+		document.getElementsByClassName('der')[0].classList.toggle("hidden");
 		return false;
 	}
 }
