@@ -5,8 +5,24 @@ function fotos() {
 		this.name = name;
 		this.img = new Image();
 		this.img.src = 'assets/img/' + name + '.jpg';
+		this.closeBtn = function() {
+			var btn = document.createElement('button');
+			var btnTxt = document.createTextNode('X');
+			btn.classList.add('btn', 'close');
+			btn.setAttribute('alt', this.name);
+			btn.appendChild(btnTxt);
+			btn.onclick = function() {
+				btn.parentElement.style.display = 'none';
+				return false;
+			}
+			return btn;
+		};
 		this.show = function() {
-			container.appendChild(this.img);
+			var imgBox = document.createElement('div');
+			imgBox.classList.add('caja');
+			imgBox.appendChild(this.img);
+			imgBox.appendChild(this.closeBtn());
+			container.appendChild(imgBox);
 		};
 		//this.close = 
 	};
@@ -15,10 +31,17 @@ function fotos() {
 	var img3 = new image('a3');
 	var img4 = new image('a4');
 
-	img1.show();
-	img2.show();
-	img3.show();
-	img4.show();
+	function mostrarFotos() {
+		img1.show();
+		img2.show();
+		img3.show();
+		img4.show();	
+	}
+	document.getElementById('restaurar').onclick = function() {
+		mostrarFotos();
+		return false;
+	}
+	mostrarFotos();
 }
 
 function textos() {
