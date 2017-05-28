@@ -144,6 +144,7 @@ font-family: 'Open Sans', Helvetica, Arial, sans-serif;
 display: block;
 margin: 1em 0;
 line-height: 1.4;
+text-align: justify;
 }
 span {
 border-bottom: 2px #E1396C solid;
@@ -160,7 +161,7 @@ footer {
 display: block;
 text-align: center;
 width: 100%;
-margin: 5em 0 0;
+margin: 2em 0 1em;
 padding: 0 0 2em;
 overflow: hidden;
 }
@@ -182,6 +183,10 @@ margin: 0;
 }
 
 /* Especial */
+.hidden {
+opacity: 0;
+transition: .5s ease all;
+}
 #logo {
 float: left;
 clear: left;
@@ -197,7 +202,7 @@ background-image: url('../img/logo.svg');
 width: 1.8em;
 height: 1.8em;
 background-repeat: no-repeat;
-background-size: 1.4em;
+background-size: 1.3em;
 left: -2em;
 position: absolute;
 background-position: center;
@@ -295,28 +300,36 @@ opacity: 1;
 transform: translateY(0px);
 }
 #fotos {
-    margin: 2em;
+margin: 2em 0 0;
+}
+#fotos img {
+width: 24%;
+padding: 1em;
+background-color: #fff;
+display: inline-block;
+margin: 0 .5%;
 }
 menu li {
 width: 33%;
 display: inline-block;
 }
 #textos {
-    margin: 1em 0 3em;
-    overflow: hidden;
+margin: 1em 0 3em;
+overflow: hidden;
 }
 #textos .caja {
-    width: 49%;
-    display: block;
-    padding: 2em;
-    background-color: rgba(0,0,0,.2);
+width: 49%;
+display: block;
+padding: 2em;
+background-color: rgba(0,0,0,.2);
+transition: .5s ease all;
 }
 #textos .caja.izq {
-    float: left;
-    clear: left;
+float: left;
+clear: left;
 }
 #textos .caja.der {
-    float: right;
-    clear: right;
+float: right;
+clear: right;
 }
 
